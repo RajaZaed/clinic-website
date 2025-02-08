@@ -168,3 +168,157 @@
         display: flex;
     }
 }
+/* team */
+/* Team Section */
+.team {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #b1edf9;
+}
+
+.team h2 {
+  font-size: 2.5rem;
+  color: #0015b4;
+  margin-bottom: 20px;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-member img {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  color: #0015b4;
+  margin-top: 10px;
+}
+
+.team-member p {
+  color: black;
+  font-size: 16px;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+/* qq */
+/* Doctor Details Section */
+.doctor-details {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.doctor-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.doctor-profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.doctor-info {
+  flex: 1;
+}
+
+.doctor-info h2 {
+  color: #0015b4;
+  margin-bottom: 10px;
+}
+
+.doctor-info p {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .doctor-profile {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .doctor-profile img {
+      width: 100%;
+      height: auto;
+  }
+}
+
+/* else */
+.why-choose, .join-team {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.why-choose h2, .join-team h2 {
+  font-size: 2rem;
+  color: #0015b4;
+}
+
+.reasons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.reason {
+  width: 300px;
+  background: #b1edf9;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reason i {
+  font-size: 2rem;
+  color: #0015b4;
+}
+
+.join-team p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.join-team .btn {
+  display: inline-block;
+  background: #0015b4;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.join-team .btn:hover {
+  background: black;
+}

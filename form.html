@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Clinic |MZD</title>
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="icon" href="assets/images/50_113701.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inconsolata:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Smooch+Sans:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    
+    
+</head>
+<body>
+    <nav class="navbar">
+        
+        <div class="logo">
+            <img src="assets/images/50_113701.png" alt="logo"  height="40vh" width="36vw">
+            ABC Clinic</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="appointment.html" id="appointment-links">Appointment</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+<!-- form -->
+ <!-- Appointment Form Section -->
+<section id="appointment-form">
+    <div class="form-container">
+        <h2>Book an Appointment</h2>
+        <form id="appointmentFormFields">
+            <label>Full Name</label>
+            <input type="text" id="name" required>
+
+            <label>Age</label>
+            <input type="number" id="age" required>
+
+            <label>Gender</label>
+            <select id="gender">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <label>Address</label>
+            <input type="text" id="address" required>
+
+            <label>What Service Do You Need?</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" class="service" value="General Checkup"> General Checkup</label>
+                <label><input type="checkbox" class="service" value="Dental Consultation"> Dental Consultation</label>
+                <label><input type="checkbox" class="service" value="Eye Checkup"> Eye Checkup</label>
+                <label><input type="checkbox" class="service" value="Skin Treatment"> Skin Treatment</label>
+                <label><input type="checkbox" class="service" value="other"> other</label>
+            </div>
+
+            <label>Disease (Optional)</label>
+            <input type="text" id="disease">
+
+            <label>Patient History (Optional)</label>
+            <textarea id="history"></textarea>
+
+            <label>Marital Status (Optional)</label>
+            <select id="marital">
+                <option>Single</option>
+                <option>Married</option>
+                <option>Divorced</option>
+            </select>
+
+            <label>Phone Number</label>
+            <input type="tel" id="phone" required>
+
+            <label>Email</label>
+            <input type="email" id="email" required>
+
+            <label>Appointment Date</label>
+            <input type="date" id="appointmentDate" required>
+
+            <button type="button" onclick="sendToWhatsApp()">Submit</button>
+        </form>
+    </div>
+</section>
+
+    
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-about">
+            <h3 class="footer-heading">About Us</h3>
+            <p>Welcome to The New School, where learning meets excellence. Our mission is to shape bright futures through quality education.</p>
+          </div>
+          <div class="footer-links">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#founder">Founder</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3 class="footer-heading">Contact Us</h3>
+            <p><strong>Email:</strong> info@thenewschool.com</p>
+            <p><strong>Phone:</strong> +92-123-456-7890</p>
+            <p><strong>Address:</strong> Main Road, Muzaffarabad, Kashmir</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 The New School. All Rights Reserved.</p>
+          <div class="footer-socials">
+            <a href="#"><img src="assets/images/facebook_icon-icons.com_59205.png" alt="Facebook"></a>
+            <a href="#"><img src="assets/images/Whatsapp_37229.png" alt="Twitter"></a>
+            <a href="#"><img src="assets/images/Instagram_icon-icons.com_66804.png" alt="Instagram"></a>
+          </div>
+        </div>
+      </footer>
+
+     
+    <!--  -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+    </script>
+    <script>
+  function sendToWhatsApp() {
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let gender = document.getElementById("gender").value;
+    let address = document.getElementById("address").value;
+    let disease = document.getElementById("disease").value || "N/A";
+    let history = document.getElementById("history").value || "N/A";
+    let marital = document.getElementById("marital").value || "N/A";
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let appointmentDate = document.getElementById("appointmentDate").value;
+
+    // Get selected services
+    let services = [];
+    document.querySelectorAll('.service:checked').forEach((checkbox) => {
+        services.push(checkbox.value);
+    });
+    let servicesSelected = services.length > 0 ? services.join(", ") : "Not Selected";
+
+    let message = `*Appointment Booking*%0A
+    *Name:* ${name}%0A
+    *Age:* ${age}%0A
+    *Gender:* ${gender}%0A
+    *Address:* ${address}%0A
+    *Service Required:* ${servicesSelected}%0A
+    *Disease:* ${disease}%0A
+    *History:* ${history}%0A
+    *Marital Status:* ${marital}%0A
+    *Phone:* ${phone}%0A
+    *Email:* ${email}%0A
+    *Appointment Date:* ${appointmentDate}%0A`;
+
+    let whatsappURL = `https://wa.me/03179220646?text=${message}`;
+    window.open(whatsappURL, "_blank");
+}
+
+    </script>
+</body>
+</html>

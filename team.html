@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Clinic |MZD</title>
+    <link rel="stylesheet" href="assets/css/team.css">
+    <link rel="icon" href="assets/images/50_113701.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inconsolata:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Smooch+Sans:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    
+    
+</head>
+<body>
+    <nav class="navbar">
+        
+        <div class="logo">
+            <img src="assets/images/50_113701.png" alt="logo"  height="40vh" width="36vw">
+            ABC Clinic</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="appointment.html" id="appointment-links">Appointment</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-about">
+            <h3 class="footer-heading">About Us</h3>
+            <p>Welcome to The New School, where learning meets excellence. Our mission is to shape bright futures through quality education.</p>
+          </div>
+          <div class="footer-links">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#founder">Founder</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3 class="footer-heading">Contact Us</h3>
+            <p><strong>Email:</strong> info@thenewschool.com</p>
+            <p><strong>Phone:</strong> +92-123-456-7890</p>
+            <p><strong>Address:</strong> Main Road, Muzaffarabad, Kashmir</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 The New School. All Rights Reserved.</p>
+          <div class="footer-socials">
+            <a href="#"><img src="assets/images/facebook_icon-icons.com_59205.png" alt="Facebook"></a>
+            <a href="#"><img src="assets/images/Whatsapp_37229.png" alt="Twitter"></a>
+            <a href="#"><img src="assets/images/Instagram_icon-icons.com_66804.png" alt="Instagram"></a>
+          </div>
+        </div>
+      </footer>
+
+     
+    <!--  -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+    </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop(); // Get the current page file name
+    const links = document.querySelectorAll(".nav-links a");
+
+    links.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active"); // Add 'active' class to the matching link
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

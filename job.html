@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABC Clinic |MZD</title>
-    <link rel="stylesheet" href="assets/css/team.css">
+    <link rel="stylesheet" href="assets/css/job.css">
     <link rel="icon" href="assets/images/50_113701.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -34,79 +34,56 @@
             <li><a href="about.html">About</a></li>
         </ul>
     </nav>
-<!-- team -->
-<section class="team" id="team">
-  <h2>Meet Our Experts</h2>
-  <div class="team-container">
-      <div class="team-member">
-          <img src="assets/images/me.jpg" alt="Dre">
-          <h3>Dr. Zaid</h3>
-          <p>Cardiologist</p>
-      </div>
-      <div class="team-member">
-          <img src="assets/images/me.jpg" alt="Dr. ">
-          <h3>Dr. Zaid</h3>
-          <p>Dermatologist</p>
-      </div>
-      <div class="team-member">
-          <img src="assets/images/me.jpg" alt="Dr. ">
-          <h3>Dr. Zaid </h3>
-          <p>Orthopedic Surgeon</p>
-      </div>
-  </div>
+
+<section class="job-application">
+    <div class="form-container">
+        <h2>Join Our Team</h2>
+        <form id="jobForm">
+            <label>Full Name</label>
+            <input type="text" id="name" required>
+
+            <label>Email</label>
+            <input type="email" id="email" required>
+
+            <label>Phone Number</label>
+            <input type="tel" id="phone" required>
+
+            <label>Gender</label>
+            <select id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label>Age</label>
+            <input type="number" id="age" required>
+
+            <label>Education</label>
+            <input type="text" id="education" required>
+
+            <label>Experience (Years)</label>
+            <input type="number" id="experience">
+
+            <label>Position Applying For</label>
+            <select id="position">
+                <option value="Doctor">Doctor</option>
+                <option value="Nurse">Nurse</option>
+                <option value="Receptionist">Receptionist</option>
+                <option value="Technician">Technician</option>
+                <option value="Other">Other</option>
+            </select>
+
+          
+
+            <label>Why Should We Hire You?</label>
+            <textarea id="reason" required></textarea>
+            <label > Submit Your Resume Manually On Whatsapp - 0317-9220646</label>
+
+            <button type="button" onclick="sendJobApplication()">Submit Application</button>
+        </form>
+    </div>
 </section>
 
-<!-- qqq -->
-<section class="doctor-details" id="doctor-details">
-  <div class="doctor-profile">
-      <img src="assets/images/me.jpg" alt="Dr. ">
-      <div class="doctor-info">
-          <h2>Dr. Zayd</h2>
-          <p><strong>Qualification:</strong> MBBS, MD (Cardiology)</p>
-          <p><strong>Experience:</strong> 15+ Years</p>
-          <p><strong>Specialization:</strong> Cardiologist</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Providing top-notch heart care with advanced treatments.</p>
-      </div>
-  </div>
-
-  <div class="doctor-profile">
-      <img src="assets/images/me.jpg" alt="Dr. ">
-      <div class="doctor-info">
-          <h2>Dr. Zay</h2>
-          <p><strong>Qualification:</strong> MBBS, MD (Dermatology)</p>
-          <p><strong>Experience:</strong> 10+ Years</p>
-          <p><strong>Specialization:</strong> Dermatologist</p>
-          <p>Expert in treating skin conditions and offering cosmetic dermatology treatments for healthy skin.</p>
-      </div>
-  </div>
-</section>
-<!-- else -->
-<section class="why-choose">
-  <h2>Why Choose Our Team?</h2>
-  <div class="reasons">
-      <div class="reason">
-          <i class="fas fa-user-md"></i>
-          <h3>Expert Doctors</h3>
-          <p>Highly qualified professionals with years of experience.</p>
-      </div>
-      <div class="reason">
-          <i class="fas fa-heartbeat"></i>
-          <h3>Patient-Centered Care</h3>
-          <p>We prioritize your health with personalized treatment plans.</p>
-      </div>
-      <div class="reason">
-          <i class="fas fa-award"></i>
-          <h3>Recognized Excellence</h3>
-          <p>Award-winning healthcare services trusted by thousands.</p>
-      </div>
-  </div>
-</section>
-
-<section class="join-team">
-  <h2>Join Our Team</h2>
-  <p>We are looking for talented professionals to join our growing team.</p>
-  <a href="job.html" class="btn">Apply Now</a>
-</section>
 
 
 
@@ -114,7 +91,7 @@
         <div class="footer-container">
           <div class="footer-about">
             <h3 class="footer-heading">About Us</h3>
-            <p>Welcome to The New School, where learning meets excellence. Our mission is to shape bright futures through quality education.</p>
+            <p>Welcome to The , where learning meets excellence. Our mission is to shape bright futures through quality education.</p>
           </div>
           <div class="footer-links">
             <h3 class="footer-heading">Quick Links</h3>
@@ -153,16 +130,31 @@
 
     </script>
     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const currentPage = window.location.pathname.split("/").pop(); // Get the current page file name
-    const links = document.querySelectorAll(".nav-links a");
+  function sendJobApplication() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let gender = document.getElementById("gender").value;
+    let age = document.getElementById("age").value;
+    let education = document.getElementById("education").value;
+    let experience = document.getElementById("experience").value;
+    let position = document.getElementById("position").value;
+    let reason = document.getElementById("reason").value;
 
-    links.forEach(link => {
-        if (link.getAttribute("href") === currentPage) {
-            link.classList.add("active"); // Add 'active' class to the matching link
-        }
-    });
-});
+    let message = `Job Application:%0A%0A
+    Name: ${name}%0A
+    Email: ${email}%0A
+    Phone: ${phone}%0A
+    Gender: ${gender}%0A
+    Age: ${age}%0A
+    Education: ${education}%0A
+    Experience: ${experience} years%0A
+    Position: ${position}%0A
+    Why Hire Me: ${reason}%0A`;
+
+    let whatsappURL = `https://wa.me/03179220646?text=${message}`;
+    window.open(whatsappURL, "_blank");
+}
 
     </script>
 </body>

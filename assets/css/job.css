@@ -1,0 +1,239 @@
+  /* Footer Section */
+  body{
+    box-sizing: border-box;
+  }
+  .footer {
+    background-color: #b1edf9;
+    color: #ffffff;
+    padding: 40px 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 250px;
+  }
+  
+  .footer-heading {
+    font-size: 1.5rem;
+    color: #0015b4;
+    margin-bottom: 20px;
+  }
+  
+  .footer-about p,
+  .footer-contact p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #0015b4;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    border-top: 1px solid #0015b4;
+    padding-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  
+  .footer-socials a {
+    margin-left: 10px;
+    display: inline-block;
+  }
+  
+  .footer-socials img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-socials a:hover img {
+    transform: scale(1.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-socials {
+      margin-top: 10px;
+    }
+  }
+  body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b1edf9;
+    padding: 15px 20px;
+    color: white;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li {
+    display: inline;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: #0015b4;
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #b1edf9;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+}
+/* job */
+.job-application {
+    padding: 50px 10px;
+    background: #f4f4f4;
+}
+
+.form-container {
+    max-width: 700px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form label {
+    font-weight: bold;
+    color: #555;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form textarea {
+    height: 80px;
+}
+
+form button {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px;
+    }
+}

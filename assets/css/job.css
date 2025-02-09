@@ -1,4 +1,8 @@
   /* Footer Section */
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body{
     box-sizing: border-box;
   }

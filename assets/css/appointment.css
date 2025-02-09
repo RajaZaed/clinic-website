@@ -252,3 +252,7 @@
 .book-service:hover {
   background: #0bd6ff;
 }
+
+html {
+  scroll-behavior: smooth;
+}

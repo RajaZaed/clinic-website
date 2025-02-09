@@ -215,3 +215,8 @@
   margin-bottom: 10px;
   object-fit: cover;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+

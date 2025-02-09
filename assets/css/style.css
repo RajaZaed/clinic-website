@@ -1,4 +1,8 @@
   /* Footer Section */
+  html {
+    scroll-behavior: smooth;
+  }
+  
   .footer {
     background-color: #b1edf9;
     color: #ffffff;
